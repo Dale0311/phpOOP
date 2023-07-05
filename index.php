@@ -8,13 +8,12 @@
 </head>
 <body>
     <?php 
-        $person1 = new person();
-        $person1->setFirstname("Albert Dale");
-        echo $person1->getFirstname();
         
-        $person2 = new person();
-        $person2->setFirstname("Joana Marie");
-        echo $person2->getFirstname();
+        $person1 = new person("dale", "male", 22);// constructor data
+        
+        echo $person1->getter("name");
+        echo $person1->setter("name", "Spongebob");
+        echo $person1->getter("name");
 
     ?>
 </body>
