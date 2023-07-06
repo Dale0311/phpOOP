@@ -1,9 +1,10 @@
 <?php 
-    class person{
+    class Person{
         private $name;
         private $sex;
         private $age;
-
+        public static $drinkingAge = 21;
+        
         // constructor - are like parameters whenever we instantiate a object in the class
         function __construct($name, $sex, $age)
         {   
@@ -11,6 +12,7 @@
             $this->sex = $sex;
             $this->age = $age;
         }
+        
         // getter
         function getter($varName){
             if( $varName == "name" || $varName == "Name" ){
@@ -22,6 +24,7 @@
                 return $this->age;
             }
         }
+        
         // setter
         function setter($varName, $val){
             if( $varName == "name" || $varName == "Name" ){
@@ -33,8 +36,10 @@
                 $this->age = $val;
             }
         }
-        function getAll(){
-            return [$this->name, $this->sex, $this->age];
+        
+        static function setDrinkingAge(int $newDA){
+            self::$drinkingAge = $newDA;
         }
+
     }
 ?>
